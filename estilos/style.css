@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+TAS:wght@100..400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-padrao), sans-serif;
+}
+
+:root {
+    --font-padrao: "Noto Serif", serif;  
+    --font-destaque: "Caveat", serif;
+    --font-option1: "Josefin Sans", serif;
+    --font-option2: "Playwrite AU TAS", serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url(../imagens/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+header {
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: auto;
+}
+
+#logo {
+    order: -1;
+}
+
+#logo > img {
+    background-color:;
+    flex: auto;
+    align-self: flex-start;
+    width: 50px;
+    filter: blur();
+
+}
+
+/* nav */
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+
+.item1 {
+    list-style-type: none;
+    display: flex;
+    padding: 5px;
+    column-gap: 10px;
+}
+
+.item1 > li > a {
+    font-family: var(--font-padrao);
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(31, 13, 31, 0.432);
+}
+
+.botao {
+    
+    padding: 3px;
+    margin: 10px;
+}
+
+.item2 {
+    display: flex;
+    list-style-type: none;
+    padding: 5px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+ion-icon.ico {
+    font-size: 24px;
+    padding: 3px;
+    color: white;
+    transform: translateY(10%);
+}
+
+main {
+
+}
+
+aside {
+
+}
+
+footer {
+
+}
+
+footer > a{
+
+}
+
+footer > a:hover{
+
+}
