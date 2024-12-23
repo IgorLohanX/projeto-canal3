@@ -6,7 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--font-padrao), sans-serif;
+    font-family: var(--font-padrao);
 }
 
 :root {
@@ -25,15 +25,17 @@ body {
     background-image: url(../imagens/bg.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 
 header {
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 13.5px );
+    backdrop-filter: blur( 1.5px );
     -webkit-backdrop-filter: blur( 13.5px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin: auto;
+    width: 100%;
 }
 
 #logo {
@@ -41,28 +43,30 @@ header {
 }
 
 #logo > img {
-    background-color:;
+    margin: 5px;
     flex: auto;
-    align-self: flex-start;
     width: 50px;
-    filter: blur();
 
 }
 
 /* nav */
 .container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5px;
+    row-gap: 5px;
+    margin: auto;
+    flex-grow: 1;
 }
 
+/* botao */
 .item1 {
     list-style-type: none;
     display: flex;
     padding: 5px;
-    column-gap: 10px;
+    column-gap: 30px;
+    transform: translateX();
 }
 
 .item1 > li > a {
@@ -74,42 +78,260 @@ header {
 }
 
 .botao {
+    display: flex;
+    padding: 5px;
+    box-shadow: 1px 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 2px solid rgba(255, 255, 255, 0.658);
+    border-radius: 5px;
     
-    padding: 3px;
-    margin: 10px;
 }
 
+.botao:hover {
+    background-color: white;
+    color: black;
+    text-shadow: 0px 0px 1px rgba(128, 0, 128, 0.534);
+    border: 2px solid rgba(128, 0, 128, 0.534);
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;
+}
+
+/* icone */
 .item2 {
     display: flex;
     list-style-type: none;
     padding: 5px;
-    column-gap: 10px;
+    column-gap: 30px;
     align-items: center;
 }
 
 ion-icon.ico {
-    font-size: 24px;
+    font-size: 32px;
     padding: 3px;
-    color: white;
+    color: rgb(128, 0, 128);
     transform: translateY(10%);
 }
 
-main {
+ion-icon.ico:hover {
+    cursor: pointer;
+    color: red;
+    text-shadow: 1px 1px 1px white;
+    transform: translateY(-10%);
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
 
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    row-gap: 50px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 90vw;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.158);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+}
+
+article > h1 {
+    width: 100%;
+    flex: auto;
+    font-family: var(--font-padrao);
+    padding: 10px;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 40px;
+    text-shadow: 1px 1px 1px rgba(128, 0, 128, 0.534);
+
+
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-timing-function: ease;
+}
+
+article > p {
+    font-family: var(--font-padrao);
+    text-align: justify all;
+    line-height: 1.4em;
+    text-shadow: 0px 0px 1px rgba(128, 0, 128, 0.534);    
+    padding: 5px;
+    font-size: 1.1em;
+    text-indent: 20px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    animation-name: normal;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-timing-function: ease;
+}
+
+strong {
+    color:aqua;
+    text-shadow: 1px 0px 1px rgba(128, 0, 128, 0.534);
+}
+
+hr {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border-color: white;
+    border-style: solid;
+    box-shadow: 0px 0px 1px rgba(128, 0, 128, 0.334);
+    
+    
+    
+}
+
+article > h2 {
+    flex: auto;
+    font-family: var(--font-padrao);
+    padding: 10px;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 1px rgba(128, 0, 128, 0.534);
+    width: 100%;
+
+
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-timing-function: ease;
+}
+
+article > h3 {
+    flex: auto;
+    font-family: var(--font-padrao);
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 1px 1px 1px rgba(128, 0, 128, 0.534);
+    padding: 10px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+
+    animation-name: reverse;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-timing-function: ease;
+}
+
+.img {
+    margin: 0;
+    display: flex;
+}
+
+.img > img {
+    margin: auto;
+    width: 80%;
+    background-position: center;
+    background-size:cover;
+    border-radius: 10px;
+    
 }
 
 aside {
-
+    color: white;
+    padding: 2px;
+    margin-top: 5px;
 }
 
 footer {
+    text-align: center;
+    padding: 5px;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.158);
+    backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: auto;
+}
+
+footer > p {
+    margin-top: 5px;
+    color: white;
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: aqua;
+}
+
+footer p > a:hover{
+    letter-spacing: 4px;
+
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;
+    transition-delay: .1s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateX(-20%);
+        animation-timing-function: ease-in;
+    }
+    10% {
+        transform: translateX(-15%);
+        animation-timing-function: ease-in-out;
+    }
+
+    20% {
+        transform: translateX(15%);
+        animation-timing-function: ease-in-out;
+    }
+
+    40% {
+        transform: rotate(10deg);
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: translateX(0%);
+        animation-timing-function: ease;
+    }
+
+    80% {
+        transform: rotate(5deg);
+        animation-timing-function: ease;
+    }
+
+    90% {
+        transform: rotate(-5deg);
+        animation-timing-function: ease;
+    }
 
 }
 
-footer > a{
+@keyframes reverse {
+    0% {
+        transform: translateX(100%);
+    }
+    80% {
+        transform: rotate(5deg);
+    }
 
+    90% {
+        transform: rotate(-5deg);
+    }
 }
 
-footer > a:hover{
+@keyframes normal {
+    0% {
+        transform: translateX(-100%);
+    }
+    80% {
+        transform: rotate(2deg);
+    }
 
+    90% {
+        transform: rotate(-2deg);
+    }
 }
